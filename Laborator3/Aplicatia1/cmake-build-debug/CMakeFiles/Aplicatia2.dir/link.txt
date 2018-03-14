@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Aplicatia2.dir/main.cpp.o CMakeFiles/Aplicatia2.dir/Stack.cpp.o CMakeFiles/Aplicatia2.dir/Queue.cpp.o CMakeFiles/Aplicatia2.dir/Drive.cpp.o  -o Aplicatia2 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Aplicatia1.dir/main.cpp.o CMakeFiles/Aplicatia1.dir/Node.cpp.o CMakeFiles/Aplicatia1.dir/LinkedList.cpp.o CMakeFiles/Aplicatia1.dir/Drive.cpp.o  -o Aplicatia1 

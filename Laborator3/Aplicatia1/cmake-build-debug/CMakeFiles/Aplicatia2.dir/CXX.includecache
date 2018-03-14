@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Drive.cpp
+Drive.h
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Drive.h
+
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Drive.h
+Queue.h
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Queue.h
+
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Queue.cpp
+Queue.h
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Queue.h
+
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Queue.h
+Stack.h
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Stack.h
+
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Stack.cpp
+Stack.h
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Stack.h
+
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Stack.h
+iostream
+-
+cstdio
+-
+
+/home/auras/Documents/POO/Laborator3/Aplicatia2/main.cpp
+Drive.h
+/home/auras/Documents/POO/Laborator3/Aplicatia2/Drive.h
+
