@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/auras/Documents/POO/Proiect1/LinkedList.cpp
+iostream
+-
+LinkedList.h
+/home/auras/Documents/POO/Proiect1/LinkedList.h
+
+/home/auras/Documents/POO/Proiect1/LinkedList.h
+Node.h
+/home/auras/Documents/POO/Proiect1/Node.h
+ostream
+-
+cassert
+-
+
+/home/auras/Documents/POO/Proiect1/Node.cpp
+Node.h
+/home/auras/Documents/POO/Proiect1/Node.h
+
+/home/auras/Documents/POO/Proiect1/Node.h
+
+/home/auras/Documents/POO/Proiect1/Set.cpp
+iostream
+-
+Set.h
+/home/auras/Documents/POO/Proiect1/Set.h
+
+/home/auras/Documents/POO/Proiect1/Set.h
+LinkedList.h
+/home/auras/Documents/POO/Proiect1/LinkedList.h
+
+/home/auras/Documents/POO/Proiect1/main.cpp
+iostream
+-
+LinkedList.h
+/home/auras/Documents/POO/Proiect1/LinkedList.h
+Set.h
+/home/auras/Documents/POO/Proiect1/Set.h
+
