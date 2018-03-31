@@ -1,56 +1,75 @@
 //
 // Created by auras on 18.03.2018.
+// Last modified by auras on 26.03.2018
 //
 
 #include "Node.h"
 
-Node::Node(int x = 0) {
+template class Node<int>;
+template class Node<IntegerPair>;
+
+template void swap<int>(Node<int> &A, Node<int> &B);
+template void swap<IntegerPair>(Node<IntegerPair> &A, Node<IntegerPair> &B);
+
+template <class T>
+Node<T>::Node(T x) {
     this->x = x;
     this->next = nullptr;
 }
 
-int Node::getX() {
+template <class T>
+T Node<T>::getX() {
     return x;
 }
 
-Node *Node::getNext() {
-    return this->next;
-}
-
-void Node::setNext(Node * next) {
-    this->next = next;
-}
-
-void Node::setX(int x = 0) {
+template <class T>
+void Node<T>::setX(T x) {
     this->x = x;
 }
 
-bool operator<(const Node &A, const Node &B) {
-    return A.x < B.x;
+template <class T>
+Node<T> *Node<T>::getNext() {
+    return this->next;
 }
 
-bool operator>(const Node &A, const Node &B) {
-    return A.x > B.x;
+template <class T>
+void Node<T>::setNext(Node<T> * next) {
+    this->next = next;
 }
 
-bool operator<=(const Node &A, const Node &B) {
-    return A.x <= B.x;
+template <class T>
+bool Node<T>::operator<(const Node<T> &B) const{
+    return this->x < B.x;
 }
 
-bool operator>=(const Node &A, const Node &B) {
-    return A.x >= B.x;
+template <class T>
+bool Node<T>::operator>(const Node<T> &B) const{
+    return this->x > B.x;
 }
 
-bool operator!=(const Node &A, const Node &B) {
-    return A.x != B.x;
+template <class T>
+bool Node<T>::operator<=(const Node<T> &B) const{
+    return this->x <= B.x;
 }
 
-bool operator==(const Node &A, const Node &B) {
-    return A.x == B.x;
+template <class T>
+bool Node<T>::operator>=(const Node<T> &B) const{
+    return this->x >= B.x;
 }
 
-void swap(Node &A, Node &B) {
-    int __tmp = B.x;
-    B.x = A.x;
-    A.x = __tmp;
+template <class T>
+bool Node<T>::operator!=(const Node<T> &B) const{
+    return this->x != B.x;
+}
+
+template <class T>
+bool Node<T>::operator==(const Node<T> &B) const{
+    return this->x == B.x;
+}
+
+template <class T>
+void swap(Node<T> &A, Node<T> &B) {
+    T __tmp = A.x;
+    A.x = B.x;
+    B.x = __tmp;
 }

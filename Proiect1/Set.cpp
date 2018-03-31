@@ -1,35 +1,64 @@
 //
 // Created by auras on 21.03.2018.
-// Last modified by auras on 26.03.2018
+// Last modified by auras on 27.03.2018
 //
 
 #include <iostream>
 #include "Set.h"
 
-Set::Set() {
-    A = new LinkedList;
+template class Set<int>;
+template class Set<IntegerPair>;
+
+template istream &operator>> <int>(istream &, Set<int> &);
+template istream &operator>> <IntegerPair>(istream &, Set<IntegerPair> &);
+
+template ostream &operator<< <int>(ostream &, const Set<int> &);
+template ostream &operator<< <IntegerPair>(ostream &, const Set<IntegerPair> &);
+
+template <class T>
+Set<T>::Set() {
+    A = new LinkedList<T>;
 }
 
-Set::Set(const LinkedList &B) {
-    A = new LinkedList;
+template <class T>
+Set<T>::Set(const LinkedList<T> &B) {
+    A = new LinkedList<T>;
     (*A) = B;
     transform((*A));
 }
 
-Set::~Set() {
+//Overload copy constructor
+template <class T>
+Set<T>::Set(const Set<T> &obj) {
+    A = new LinkedList<T>;
+    (*A) = *obj.A;
+}
+
+template <class T>
+Set<T>::~Set() {
     delete A;
 }
 
-void Set::transform(LinkedList &B) {
+template <class T>
+void Set<T>::transform(LinkedList<T> &B) {
     B.sort();
     B.unique();
 }
 
-Set Set::operator+(const Set &obj) {
+template <class T>
+void Set<T>::insert(T __tmp) {
+    A->insertFront(__tmp);
+    A->sort();
+    A->unique();
+
+}
+
+template <class T>
+Set<T> Set<T>::operator+(const Set<T> &obj) {
     //declaration
-    Set aux;
-    Node * i = this->A->begin();
-    Node * j = obj.A->begin();
+    Set<T> aux;
+    Node<T> * i = this->A->begin();
+    Node<T> * j = obj.A->begin();
 
     //Algorithm that use merge idea
     while(i != nullptr && j != nullptr) {
@@ -59,10 +88,11 @@ Set Set::operator+(const Set &obj) {
     return aux;
 }
 
-Set Set::operator*(const Set &obj) {
-    Set aux;
-    Node * i = obj.A->begin();
-    Node * j = this->A->begin();
+template <class T>
+Set<T> Set<T>::operator*(const Set<T> &obj) {
+    Set<T> aux;
+    Node<T> * i = obj.A->begin();
+    Node<T> * j = this->A->begin();
 
     while(i != nullptr && j != nullptr) {
         if(*i == *j) {
@@ -79,10 +109,11 @@ Set Set::operator*(const Set &obj) {
     return aux;
 }
 
-Set Set::operator-(const Set &obj) {
-    Set aux;
-    Node * i = obj.A->begin();
-    Node * j = this->A->begin();
+template <class T>
+Set<T> Set<T>::operator-(const Set<T> &obj) {
+    Set<T> aux;
+    Node<T> * i = obj.A->begin();
+    Node<T> * j = this->A->begin();
 
     while(i != nullptr && j != nullptr) {
         if(*i == *j){
@@ -105,21 +136,38 @@ Set Set::operator-(const Set &obj) {
     return aux;
 }
 
-Set &Set::operator=(const Set &obj) {
+template <class T>
+Set<T> &Set<T>::operator=(const Set<T> &obj) {
     if(this == &obj)
         return *this;
 
     if(!A->empty())
         A->clear();
 
-    for(Node * cross = obj.A->begin(); cross != nullptr; cross = cross->getNext())
+    for(Node<T> * cross = obj.A->begin(); cross != nullptr; cross = cross->getNext())
         A->insertAfter(cross->getX());
 
     return *this;
 
 }
 
-istream &operator>>(istream &in, Set &obj) {
+template <class T>
+bool Set<T>::operator<(const Set<T> &obj) const {
+    return *this->A < *obj.A;
+}
+
+template <class T>
+bool Set<T>::operator!=(const Set<T> &obj) const {
+    return *this->A != *obj.A;
+}
+
+template <class T>
+bool Set<T>::operator==(const Set<T> &obj) const {
+    return *this->A == *obj.A;
+}
+
+template <class T>
+istream &operator>>(istream &in, Set<T> &obj) {
     long long n;
     do {
         cout << "Number of elements : ";
@@ -129,7 +177,7 @@ istream &operator>>(istream &in, Set &obj) {
     }while(n < 0 || n > INF);
 
     if(n > 0) {
-        int __tmp;
+        T __tmp;
         cout << "Insert the elements of the set : ";
         for (int i = 0; i < n; ++i) {
             in >> __tmp;
@@ -141,10 +189,11 @@ istream &operator>>(istream &in, Set &obj) {
     return in;
 }
 
-ostream &operator<<(ostream &out,const Set &obj) {
+template <class T>
+ostream &operator<<(ostream &out,const Set<T> &obj) {
     if(!obj.A->empty()) {
         out << '{';
-        for (Node *cross = obj.A->begin(); cross != obj.A->end(); cross = cross->getNext())
+        for (Node<T> *cross = obj.A->begin(); cross != obj.A->end(); cross = cross->getNext())
             out << cross->getX() << ',';
         out << obj.A->end()->getX() << '}';
     }
@@ -152,4 +201,24 @@ ostream &operator<<(ostream &out,const Set &obj) {
         out << "The set that you are trying to print is empty!";
     }
     return out;
+}
+
+Set<IntegerPair> produs(const Set<int> &X, const Set<int> &Y) {
+    Set<IntegerPair> res;
+    IntegerPair aux;
+    Node<int> * cross1 = X.A->begin();
+
+    while(cross1 != nullptr) {
+        Node<int> *cross2 = Y.A->begin();
+        while(cross2 != nullptr) {
+            aux.first() = cross1->getX();
+            aux.second() = cross2->getX();
+            cross2 = cross2->getNext();
+            res.A->insertAfter(aux);
+        }
+        cross1 = cross1->getNext();
+    }
+    res.transform(*res.A);
+
+    return res;
 }

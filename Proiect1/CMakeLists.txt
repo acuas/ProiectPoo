@@ -3,4 +3,4 @@ project(Proiect1)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Proiect1 main.cpp Node.cpp Node.h LinkedList.cpp LinkedList.h Set.cpp Set.h)
+add_executable(Proiect1 main.cpp Node.cpp Node.h LinkedList.cpp LinkedList.h Set.cpp Set.h IntegerPair.cpp IntegerPair.h)

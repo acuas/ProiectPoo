@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Proiect1.dir/Node.cpp.o"
   "CMakeFiles/Proiect1.dir/LinkedList.cpp.o"
   "CMakeFiles/Proiect1.dir/Set.cpp.o"
+  "CMakeFiles/Proiect1.dir/IntegerPair.cpp.o"
   "Proiect1.pdb"
   "Proiect1"
 )

@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/auras/Documents/POO/Proiect1/IntegerPair.cpp
+IntegerPair.h
+/home/auras/Documents/POO/Proiect1/IntegerPair.h
+
+/home/auras/Documents/POO/Proiect1/IntegerPair.h
+iostream
+-
+
 /home/auras/Documents/POO/Proiect1/LinkedList.cpp
 iostream
 -
@@ -25,6 +33,8 @@ Node.h
 /home/auras/Documents/POO/Proiect1/Node.h
 
 /home/auras/Documents/POO/Proiect1/Node.h
+IntegerPair.h
+/home/auras/Documents/POO/Proiect1/IntegerPair.h
 
 /home/auras/Documents/POO/Proiect1/Set.cpp
 iostream
@@ -39,8 +49,8 @@ LinkedList.h
 /home/auras/Documents/POO/Proiect1/main.cpp
 iostream
 -
-LinkedList.h
-/home/auras/Documents/POO/Proiect1/LinkedList.h
+algorithm
+-
 Set.h
 /home/auras/Documents/POO/Proiect1/Set.h
 

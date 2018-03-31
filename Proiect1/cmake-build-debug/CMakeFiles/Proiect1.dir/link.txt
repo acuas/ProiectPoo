@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Proiect1.dir/main.cpp.o CMakeFiles/Proiect1.dir/Node.cpp.o CMakeFiles/Proiect1.dir/LinkedList.cpp.o CMakeFiles/Proiect1.dir/Set.cpp.o  -o Proiect1 
+/usr/bin/c++  -g   CMakeFiles/Proiect1.dir/main.cpp.o CMakeFiles/Proiect1.dir/Node.cpp.o CMakeFiles/Proiect1.dir/LinkedList.cpp.o CMakeFiles/Proiect1.dir/Set.cpp.o CMakeFiles/Proiect1.dir/IntegerPair.cpp.o  -o Proiect1 
