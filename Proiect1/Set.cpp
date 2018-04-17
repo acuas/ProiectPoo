@@ -1,18 +1,24 @@
 //
 // Created by auras on 21.03.2018.
-// Last modified by auras on 27.03.2018
+// Last modified by auras on 16.04.2018
 //
 
 #include <iostream>
 #include "Set.h"
 
 template class Set<int>;
+template class Set<float>;
+template class Set<double>;
 template class Set<IntegerPair>;
 
 template istream &operator>> <int>(istream &, Set<int> &);
+template istream &operator>> <float>(istream &, Set<float> &);
+template istream &operator>> <double>(istream &, Set<double> &);
 template istream &operator>> <IntegerPair>(istream &, Set<IntegerPair> &);
 
 template ostream &operator<< <int>(ostream &, const Set<int> &);
+template ostream &operator<< <float>(ostream &, const Set<float> &);
+template ostream &operator<< <double>(ostream &, const Set<double> &);
 template ostream &operator<< <IntegerPair>(ostream &, const Set<IntegerPair> &);
 
 template <class T>

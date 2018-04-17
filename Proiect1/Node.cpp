@@ -6,9 +6,13 @@
 #include "Node.h"
 
 template class Node<int>;
+template class Node<float>;
+template class Node<double>;
 template class Node<IntegerPair>;
 
 template void swap<int>(Node<int> &A, Node<int> &B);
+template void swap<float>(Node<float> &A, Node<float> &B);
+template void swap<double>(Node<double> &A, Node<double> &B);
 template void swap<IntegerPair>(Node<IntegerPair> &A, Node<IntegerPair> &B);
 
 template <class T>

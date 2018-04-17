@@ -1,0 +1,3 @@
+/home/auras/Documents/POO/Laborator 7/Aplicatia 1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/auras/Documents/POO/Laborator 7/Aplicatia 1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/auras/Documents/POO/Laborator 7/Aplicatia 1/cmake-build-debug/CMakeFiles/Aplicatia_1.dir

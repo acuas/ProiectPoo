@@ -1,17 +1,23 @@
 //
 // Created by auras on 18.03.2018.
-// Last Modified by auras on 26.03.2018
+// Last Modified by auras on 16.04.2018
 //
 #include <iostream>
 #include "LinkedList.h"
 
 template class LinkedList<int>;
+template class LinkedList<float>;
+template class LinkedList<double>;
 template class LinkedList<IntegerPair>;
 
 template istream &operator>> <int>(istream &, LinkedList<int> &);
+template istream &operator>> <float>(istream &, LinkedList<float> &);
+template istream &operator>> <double>(istream &, LinkedList<double> &);
 template istream &operator>> <IntegerPair>(istream &, LinkedList<IntegerPair> &);
 
 template ostream &operator<< <int>(ostream &, const LinkedList<int> &);
+template ostream &operator<< <float>(ostream &, const LinkedList<float> &);
+template ostream &operator<< <double>(ostream &, const LinkedList<double> &);
 template ostream &operator<< <IntegerPair>(ostream &, const LinkedList<IntegerPair> &);
 
 template <class T>
