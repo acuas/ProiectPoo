@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Proiect2.dir/main.cpp.o CMakeFiles/Proiect2.dir/Tourist.cpp.o CMakeFiles/Proiect2.dir/Destination.cpp.o CMakeFiles/Proiect2.dir/Activitate.cpp.o CMakeFiles/Proiect2.dir/Beach.cpp.o CMakeFiles/Proiect2.dir/Mountain.cpp.o CMakeFiles/Proiect2.dir/Monastery.cpp.o CMakeFiles/Proiect2.dir/Museums.cpp.o  -o Proiect2 
